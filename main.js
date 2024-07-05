@@ -31,7 +31,7 @@ function getMovies(search) {
                         <a class="btn btn-primary" href="#" onclick="movieSelected('${movie.imdbID}')">View details</a>   
                     </div>
                 </div>  
-            </div>`; //mora movieSelected('movie.imdbID') da ide imdbId pod navodnike zato sto je string u pitanju i da tako ga posmatra funkcija da prima string parametar
+            </div>`;
         });
         $('#movies').html(output);
       }
@@ -44,10 +44,8 @@ function getMovies(search) {
 function movieSelected(imdbID) {
   sessionStorage.setItem('movieId', imdbID);
   window.location = 'movie.html';
-  return false; //When you return false from an event handler it prevents the default action for that event and stops the event bubbling up through the DOM
+  return false;
 }
-//u ovom slucaju false ce spreciti <a href="#"> da se ponasa defoltno tj da linkuje na odredjenu stranicu, u ovom slucaju da osvezi postojecu stranicu
-//a nama treba da uradi navigaciju na drugu stranicu preko window.location
 
 function getMovie() {
   let movieId = sessionStorage.getItem('movieId');
