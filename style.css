@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+#movies img{
+    width: 100%;
+}
+
+@media(min-width: 960px){
+    #movies .col-md-3 .card{
+        height: 460px;
+    }
+    
+    #movies .col-lg-3 img{
+        height: 280px;
+        margin-bottom: 10px;
+    }
+    
+    #movies .col-lg-3 .card-title{
+        font-size: 22px;
+    }
+}
+
+@media(width<960px) and (width>=768){
+
+}
+
+.btnLink{
+    display: inline;
+}
